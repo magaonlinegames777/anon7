@@ -1,0 +1,978 @@
+.loginPage{
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-image: url(pic1.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    cursor: pointer;
+}
+.bigTxt{
+    font-size: 24px!important;
+}
+.smlTxt{
+    font-size: 18px!important;
+}
+.loadingCaster{
+    background-color: #000000d1;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 777;
+    display: grid;
+    place-items: center;
+}
+.loadingCaster span{
+    color: white;
+}
+.loginForm{
+    border-radius: 4px;
+    background-color: #f2f2f3fa;
+    width: 95%;
+    margin: auto;
+    font-size: 24px;
+    padding: 19px;
+    max-width: 450px;
+    margin-top: 14px;
+    padding-bottom: 70px;
+}
+.loginForm hr{
+    border: 0.3px solid white;
+    margin-top: 8px;
+}
+.loginForm input{
+    border-radius: 10px!important;
+    padding: 6px!important;
+    height: 40px!important;
+    font-size: 16px!important;
+    background-color: white!important;
+    width: 95%!important;
+    border: none;
+}
+
+.humanChecker{
+    display: inline-block;
+    width: 150px;
+    height: 38px;
+    background-color: white;
+} 
+.humanChecker img{
+    width: 100%;
+}
+.veriInput{
+    position: absolute;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.veriInput input{
+    height: auto!important;
+    width: 299px;
+    width: 225px!important;
+    border-radius: unset!important; 
+}
+
+.blck .loginBtn{
+    display: block;
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 7px 9px;
+}
+
+
+.registerDirector{
+    text-align: center;
+}
+.registerDirector span{
+    display: block;
+    color: #AAB8C5;
+}
+.registerDirector a{
+    cursor: pointer;
+}
+
+.small_screen_effect{
+    display: block;
+}
+
+.loginSouljas a:hover{
+    text-decoration: underline;
+}
+
+.GOD_ACCOUNT{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(pic1.JPG);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.header_mobile{
+    position: fixed;
+    width: 25%;
+    padding: 6px;
+    overflow:hidden;
+    background: #6c757d;
+    height: 100%;
+    z-index: 666;
+}  
+.controller_scroller{
+    overflow-y: scroll; /* Add the ability to scroll */
+    overflow-y: auto;
+    height: 100%;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.controller_scroller::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.controller_scroller {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+#god_img{
+    top: 0;
+    left: 0;
+    width: 100px;
+    display: block;
+}
+#avatar_img{
+    position: absolute;
+    top: 44px;
+    right: 16px;
+    
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 2px solid #f8f9fa;
+    background: #f8f9fa;
+    color: #fff;
+}
+#nb_username{
+    display: none;
+    position: absolute;
+    top: 74px;
+    right: 10px;
+    font-size: 8px;
+    color: #aaaaaa;
+}
+#nb_username_desktop{
+    position: absolute;
+    top: -52px;
+    z-index: 999999;
+    right: 9px;
+    font-size: 8PX;
+    color: #aaaaaa;
+}
+
+.menu_mobile{
+    position: absolute;
+    top: 44px;
+    right: 26px;
+
+    top: 45px;
+    right: 63px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.menu_mobile i{
+    border: 1px solid;
+    padding: 2px 9px;
+}
+
+.header_1{
+    background: #ffffff99;
+    padding: 9px 0px;
+}
+.hdr1row{
+    position: relative;
+    top: 11px;
+}
+.balance{
+    display: block;
+    width: auto;
+    min-width: 100px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 3px 5px;
+    position: absolute;
+    top: -10px;
+    right: 58px;
+    border-radius: 5px;
+}
+.header_ryt{
+    text-align: right;
+    padding: 9px 2px;
+}
+.balance i{
+    position: relative;
+    top: 5px;
+}
+
+.balance_price{
+    display: inline-block;
+    font-size: 20px;
+    /* top: -3px; */
+    /* position: absolute; */
+    margin-top: 0;
+    position: relative;
+    right: 0;
+    
+}
+
+.tbl_1{
+   
+}
+
+@media screen and (max-width: 500px) and (min-width: 0px) {
+    .humanChecker{
+        display: block;
+    }
+    .blck{
+        margin-top: 53px;
+    }
+    .veriInput{
+        margin-top: 14px;
+        margin-left: 0;
+        
+    }
+    #verifyCapture{
+        border: 1px solid grey;
+    }
+
+    .loginForm{
+        width: 90%;
+        margin: 18px;
+    }
+
+
+    .header_1{
+        margin-top: 112px;
+    }
+}
+
+#avatar_img_desktop{
+    position: absolute;
+    top: -7px;
+    right: 16px;
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    border: 2px solid #f8f9fa;
+    background: #f8f9fa;
+    color: #fff;
+}
+.largeScreenHide{
+    visibility: hidden;
+}
+
+.links{
+    margin-top: 70px;
+}
+.links a{
+    color: white;
+}
+.links a span{
+    display: inline-block;
+    border-radius: 50%;
+    background: red;
+    font-size: 11px;
+    height: 16px;
+    width: 16px;
+    position: relative;
+    /* top: 4px; */
+    text-align: center;
+}
+#products_links li{
+    margin-bottom: 8px;
+    position: relative;
+}
+#products_links li a{
+    color: white;
+    max-width: 225px;
+    display: inline-block;
+}
+#products_links li i{
+    position: absolute;
+    right: 0;
+    color: white;
+    top: -3px;
+}
+
+.homeContent, .balanceContent{
+    position: relative;
+    right: 0;
+    width: 75%; 
+    float: right; 
+    padding: 34px; 
+    overflow: hidden;
+    overflow-y: auto;
+}
+.activityCard{
+
+}
+.cardman{
+    background: rgba(255, 255, 255, 0.03);
+    background: white;
+    width: 95%;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.cardmanTITLE{
+    display: block;
+}
+.cardman_title{
+    margin: 10px;
+}
+.cardman i{
+    position: absolute;
+    right: 9px;
+    top: 39px;
+    font-size: 40px;
+}
+.activityCard{
+    height: 400px;
+    overflow: auto;
+}
+.ttable{
+    position: relative;
+    height: 47px;
+}
+.tt1{
+    position: relative;
+    font-weight: bold;
+    font-size: 11px;
+}
+.deco_1{
+    width: 98%;
+    margin: auto;
+}
+#balanceTXT,#ticketTXT, #orderTXT{
+    font-size: 46px;
+    position: relative;
+    top: -10px;
+}
+.c1{
+    
+}
+.c2{
+    
+}
+.c3{
+    
+}
+.number_txt{
+    display: inline-block;
+    border-radius: 9px;
+    padding: 5px;
+    font-size: 12px!important;
+    position: relative;
+    width: 36px;
+    text-align: center;
+    cursor: pointer!important;
+}
+
+.number_txt{
+    color: white;
+}
+.tt2{
+    font-size: 13px;
+}
+.table_1{
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    margin: 0;
+}
+.table_1 .col{
+    border-right: 1px solid rgba(128, 128, 128, 0.281);
+    border-left: 1px solid rgba(128, 128, 128, 0.281);
+    padding: 7px;
+}
+
+
+/*  BALANCE SECTION CONTENT 2  */
+.balanceContent .BC_top{
+    background: rgb(209, 209, 209);
+    height: 50px;
+}
+.balanceContent{
+    width: 88%;
+    left: -21px;
+}
+.BC_top{
+    background: pink;
+}
+
+#dollarInput{
+    width: 98%;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-left: 8px;
+}
+.transactionCard{
+}
+.searchArea{
+    border-top: 0.5px solid grey;
+    padding: 8px;
+}
+.searchArea input{
+    height: 13px!important;
+    width: 158px!important;
+    display: inline-block;
+    padding: 4px!important;
+    border: 3px solid grey!important;
+}
+.table_transaction{
+    border: 1px solid grey;
+    overflow: auto;
+}
+.ttble_rw th{
+    text-align: center;
+    border-right: 1px solid grey;
+}
+.arrowContainer{
+    position: relative;
+}
+
+#depositBtn{
+    background: #000000c2;
+}
+
+
+.purchasedOrders{
+}
+.purchasedOrders .po_Content, .CONTENTSBX{
+    width: 98%;
+    margin: auto;
+    padding: 13px;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+.po_table{
+    width: 100%;
+    padding: 0 10px;
+    margin-top: 30px;
+}
+
+.orderBX{
+    width: 150px;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+}
+.orderBX i{
+    border: 0.3px solid grey;
+    display: inline-block;
+    margin: -1px;
+}
+.bxFloat{
+    float: left;
+} 
+.bxSupport{
+    width: 30%;
+}
+.bxSupport, .bxTicket{
+    min-width: 260px;
+    padding: 21px;
+    border-radius: 8px;
+}
+.bxTicket{
+    width: 56%;
+    min-width: 351px!important;
+    margin-left: 20px;
+}
+.btnNewIssue{
+    text-align: right!important;
+    overflow: hidden;
+    background: transparent!important;
+}
+.btnNewIssue a{
+    display: inline-block;
+}
+.btnNewIssue p{
+    background: rgb(244 244 196);
+    text-align: center;
+    margin-top: 10px;
+    padding: 8px;
+}
+.allTickets_notice{
+    width: 100%;
+    text-align: left;
+    background: #0073b7;
+}
+.labels_row{
+    position: relative;
+    margin-top: 4px;
+}
+.indicator{
+    height: 100%;
+    width: 3px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+}
+.lbl_txt{
+    padding: 0px 6px;
+}
+.message_bx{
+    width: 98%;
+    border: 1px solid black;
+    padding: 22px;
+    border-radius: 6px;
+}
+.warning_BX{
+    background: #d1ecf1;
+    width: 90%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 6px;
+}
+.rules_BX{
+    width: 90%;
+    padding: 8px;
+    margin: auto;
+    background: #ffffad;
+    
+}
+.rules_BX li{
+    margin-top: 6px;
+}
+.message_BX{
+    margin-top: 80px;
+}
+.cart{
+    width: 90%;
+    margin: auto;
+    padding: 38px 8px;
+    margin-top: 30px;
+    border-radius: 3px;
+    position: absolute;
+    right: 38px;
+    width: 67%;
+}
+
+.settingsBX{
+    width: 66%;
+    position: absolute;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+    padding: 35px 8px;
+    right: -134px;
+}
+.settingsBX .SBX_1{
+    width: 30%;
+    padding: 6px;
+    float: left;
+    border-radius: 4px;
+    padding: 40px 20px;
+}
+
+.SBX_2{
+    border-radius: 4px;
+    width: 65%;
+    padding: 6px;
+    float: left;
+    margin-left: 7px;
+    padding: 40px 20px;
+}
+@media screen  and (max-width: 530px) 
+and (min-width: 0){ 
+    .SBX_1{
+        width: 98%!important;
+        margin-top: 8px;
+    }
+    .SBX_2{
+        width: 98%!important;
+        margin-top: 8px;
+        margin-left: 0;
+    }
+}
+.SBX_1 h4, .SBX_1 ul li{
+    padding: 19px;
+    border-bottom: 1px solid black;
+}
+.settings_links a{
+
+}
+.client_form label{
+    display: block;
+}
+.client_form input{
+    border: 1px solid grey!important;
+    border-radius: 15px!important;
+    padding-left: 10px!important;
+    width: 90%!important;
+    height: 27px!important;
+}
+.profileSaveChanges a{
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.productsForSale{
+    width: 68%;
+    margin: 9px;
+    position: absolute;
+    right: 32px;
+    top: 80px;
+    
+}
+.pFS_bx{
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    background: #000000de;
+    width: 95%;
+    padding: 9px;
+    color: white;
+    padding: 35px 9px;
+    box-shadow: 4px 4px 12px #80808012;
+    margin-bottom: 17px;
+}
+.productBX{
+    border-radius: 6px;
+    margin-top: 10px;
+    box-shadow: 20px 20px 50px 15px grey;
+    padding: 18px;
+}
+.shopping_cart{
+    background-color: rgb(255, 255, 255);
+    padding: 8px;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+}
+#cancel_shopping_nb{
+    border-radius: 50%;
+    padding: 0;
+    height: 20px;
+    line-height: 20px;
+    margin-right: 8px;
+}
+.products_body tr{
+    border-bottom: 1px solid grey!important;
+}
+.viewCartBX{
+    padding: 8px;
+}
+.viewCartBX .btn{
+    font-size: 10px;
+}
+
+.productTable{
+    overflow: hidden;
+    overflow-x: auto;
+}
+.productTable table{
+    border-top: 1px solid grey;
+}
+.productTable table tr th{
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+.productTable table tr td{
+}
+.product_buy_btn{
+    font-size: 10px;
+    line-height: 13px!important;
+    padding: 5px!important;
+    height: auto;
+}
+.error_god{
+    color: red;
+    font-size: 13px;
+}
+
+/* god account links */
+.shopping_cart{
+
+}
+.all_links_icon{
+    cursor: pointer;
+}
+.all_links{
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.all_links a{
+    display: block!important;
+    color: rgb(194, 194, 194)!important;
+}
+.all_links a:hover{
+    display: block!important;
+    color: rgba(159, 184, 158, 0.685)!important;
+}
+.productTable tr{
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
+.PROD_BOX_BTN a{
+    text-align: center;
+    display: block;
+    width: 280px;
+    margin: auto;
+    padding: 0;
+    height: auto;
+    height: 29px;
+    line-height: 29px;
+}
+/* for MOBILE SCREENS*/
+@media screen and (max-width: 990px) and (min-width: 0px){
+    
+    #nb_username_desktop{
+        position: absolute;
+        top: 26px;
+        right: 9px;
+        font-size: 8PX;
+        color: #aaaaaa;
+    }
+    .PROD_BOX_RED{
+        width: 100%;
+        overflow: auto;
+    }
+    .cart{
+        width: 98%;
+        position: relative;
+        left: 0;
+        right: 0;
+    }
+    .productsForSale{
+        width: 98%;
+        right: 0px!important;
+        top: 187px;
+        margin: 0px;
+    }
+    .settingsBX{
+        width: 95%;
+        right: 0;
+    }
+    .largeScreenHide{
+        visibility: visible!important;
+    }
+    .header_mobile{
+        width: 100%;
+        height: 113px;
+    }
+    .controller_scroller{
+        width: 115%;
+    }
+    .links{
+        display: none;
+        overflow: hidden;
+    }
+    .balance{
+           right: 10px;
+    }
+    #avatar_img_desktop{
+        display: none;
+    }
+    .header_mobile{
+        display: block;
+    }
+    .header_1{
+        margin-top: 112px;
+        background: white;
+    }
+
+    .homeContent{
+        position: relative;
+        right: 0;
+        width: 100%; 
+        float: right; 
+        padding: 0px; 
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .cardman{
+        margin-top: 10px;
+    }
+
+    .c_1{
+        width: 10%;
+    }
+    .c_2{
+        width: 17%;
+    }
+    .c_3{
+        width: 17%;
+    }
+    .c_4{
+        width: 17%;
+    }
+    .c_5{
+        width: 17%;
+    }
+}
+
+
+/* LOW BALANCE BTC */
+.BTC_ARENA{
+    z-index: 666666;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(godd.jpg);
+    background-size: contain;
+    background-position: center;
+    background-color: #000000;
+    font-family: 'KoHo', sans-serif;
+}
+#btcAmount{
+    color: green;
+}
+.blc{       
+    display: block!important;
+}
+.pole{
+    width: 3px;
+    height: 80px;
+    background-color: white;
+    display: block;
+    margin: auto;
+}
+.btc_bx_row{
+    text-align: center;
+    background-color: #000000a8;
+    position: absolute;
+    width: 98%;
+    max-width: 700px;
+    top: 20%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 20px 0px;
+}
+.close_btc_arena{
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.flashaccount img{
+    width: 100%;
+}
+.group-field label{
+    display: block;
+}
+.group-field span{
+    display: block;
+    color: #0073b7;
+}
+
+
+.glass_blur{
+    height: 46px;
+    /* min-height: 81px; */
+    width: 100%;
+    background-color: #6c757d;
+    filter: blur(5px);
+    position: absolute;
+}
+.BTC_PAYMENT{
+    z-index: 999;
+}
+.btc_p p{
+    border: 1px solid gray;
+    width: fit-content;
+
+    margin-bottom: auto;
+    margin-bottom: 11px;
+    padding: 9px;
+    margin: auto;
+    color: gray;
+}
+.BTC_PAYMENT #btc_p{
+    text-align: center;
+    font-size: 16px;
+}
+.paymentBX{
+    width: 98%;
+    margin: auto;
+    position: relative;
+    word-break: break-all;
+}
+
+.converter{
+    color: gray;
+}
+.usd-man{
+    display: inline-block;
+    /* width: 100px; */
+    width: 230px;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}
+.cmt{
+    text-align: center;
+}
+.btc-man{
+    text-align: center;
+}
+.usd-man span{
+    
+}
+
+#price_of_productBOT span{
+    font-size: 10px;
+    position: absolute;
+}
+
+
+.table_anon{
+    position: relative;
+    overflow: auto;
+    max-width: 327px;
+    /* width: 90%; */
+    margin: auto;
+    border-bottom: 1px solid;
+}  
+#closePSN{
+    cursor: pointer;
+} 
+
+.tb_bx{
+    width: 49%;
+    float: left;
+    margin-left: 2px;
+    text-align: center;
+
+}
+.tbx1{
+    border-right: 1px solid;
+}
+
+#closePSN{
+    position: absolute;
+    right: 0;
+    color: red;
+    font-size: 15px;
+    top: 9px;
+}
