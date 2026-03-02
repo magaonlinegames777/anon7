@@ -474,6 +474,8 @@ function BUYNOW(){
     //BUY_GOD();
     $('.productTable').slideUp();
     $('.SHOPPING_CART_BOX').removeClass('hide');
+
+
 }
 
 function getThisProduct(x){
@@ -1704,8 +1706,10 @@ function GET_BTC_NOW(x){
          final_value = BTC_amount.toFixed(4)
          $('.btc-man span').text(final_value);
          addUP(raw_price);
-        //  $('#price_of_product').text(x);
+         $('.price_of_product').text(x);
         // $('.').text(final_value)
+
+        $('.price').text();
          console.log('BTC VALUE: '+ final_value);
     });
 }
