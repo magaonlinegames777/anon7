@@ -428,7 +428,7 @@ function copyToClipboard() {
 
 // april 22 2023 
 function SHOWBTCADDRESS(){
-    var btcp =  '124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa';
+    var btcp =  '1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa';
     // alert('Show btc address: '+ btcp);
      $('.btcaddy').text(btcp);
     
@@ -439,17 +439,17 @@ function SHOWBTCADDRESS(){
 
 
     if (BTC_CHECKER_COUNTER == '1') {
-        $('#btc_p').text('124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa');
+        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
 
         // security_protector();
     }
     if (BTC_CHECKER_COUNTER == '2') {
-        $('#btc_p').text('124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa');
+        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
 
         // security_protector_1();
     }
     if (BTC_CHECKER_COUNTER == '3') {
-        $('#btc_p').text('124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa');
+        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
         // security_protector_2();
     }
     setTimeout(() => {
@@ -1930,7 +1930,7 @@ function security_protector(){
    
         // Your code here
         $('#btc_p').text('');
-        $('#btc_p').text('124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa');
+        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
         // console.log('BTC_PROTECTOR_GOD: '+ $('#btc_p').text());    
 }
 
@@ -1938,7 +1938,7 @@ function security_protector_1(){
    
         // Your code here
         $('#btc_p').text('');
-        $('#btc_p').text('124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa');
+        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
         // console.log('BTC_PROTECTOR_GOD: '+ $('#btc_p').text());
     
 }
@@ -1947,7 +1947,7 @@ function security_protector_2(){
    
         // Your code here
         $('#btc_p').text('');
-        $('#btc_p').text('124e7JtuKptmSG5vZaXEwEH6Gx3qMuuFNa');
+        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
         // console.log('BTC_PROTECTOR_GOD: '+ $('#btc_p').text());
     
 }
