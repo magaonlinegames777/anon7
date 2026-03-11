@@ -653,17 +653,28 @@
                 </div>
               </div>
               <div class="table_anon">
+                <span class="material-icons tableInfoSymbol">!</span>
+
                 <div class="tb_bx tbx1">
                   OTP Authenticator BOT added
                 </div>
                 <div class="tb_bx logsPrice">
-                  $ <span class="botPrice">150</span>
+                  $<span class="botPrice">150</span>
                 </div>
               </div>
-              <div class="table_anon" id="psn_hldr">
+              <div class="table_anon psn" id="psn_hldr">
                 <i class="material-icons" id="closePSN" onclick="closePSN();">close</i>
                 <div class="tb_bx tbx1">
                   Private Server Network [VPN] (optional): 
+                </div>
+                <div class="tb_bx">
+                  $<span class="pvnPrice">100</span>
+                </div>
+              </div>
+               <div class="table_anon psn" id="psn_hldr">
+                <i class="material-icons" id="closePSN" onclick="closeESF();">close</i>
+                <div class="tb_bx tbx1">
+                  Email & SMS flooding (optional): 
                 </div>
                 <div class="tb_bx">
                   $<span class="pvnPrice">100</span>
@@ -676,13 +687,14 @@
             
             <div class="converter" style="text-align: center; font-size: 28px;">
               <div class="usd-man">
-                <span id="price_of_product"></span>
+                <!-- <span id="price_of_product"></span> -->
+                <span id="total_price_of_product"></span>
                 <!-- <span id="price_of_productBOT">+$200  <span>(Bot Authenticator Added)</span> </span> -->
 
               </div>
 
               <div class="btc-man">
-                <span></span> BTC
+                <span id="btc_value_live"></span> BTC
               </div>
             </div>
             <br><br>
