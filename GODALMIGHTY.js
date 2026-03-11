@@ -4,6 +4,7 @@ var max = 5;
 var TOPUPBTCWITH, LOGOUT_USER_ID;
 var IPCOUNTRY, USA_DATE, GH_DATE;
 var BTC_CHECKER_COUNTER = '0';
+var PRODUCT_PRICE;
 
 //SECURITY
 var WHOAREYOU, TODAY_DATE;
@@ -1694,9 +1695,13 @@ function GET_BTC_NOWold(x){
 function GET_BTC_NOW(x){
     BUY_GOD();
     //var amount = jQuery('#usd').val();
-    var raw_price = x.substring(1);
-    var raw_price =  parseInt(raw_price);
-    console.log('This is raw price: ',raw_price);
+    
+    console.log('BTC convert: ' + x);
+    var raw_price = x.substring(1); 
+    // var raw_price = x;
+    raw_price =  parseInt(raw_price);
+    PRODUCT_PRICE = raw_price + 350;
+    console.log('This is raw price: '+ raw_price);
     var amount = raw_price; //change here if you want the price to reflect
 
     btc= jQuery('#btcvalue')
@@ -1716,15 +1721,39 @@ function GET_BTC_NOW(x){
 // FEB 2026
 function closePSN(){
     $('#psn_hldr').hide();
+    alert(PRODUCT_PRICE);
+    var new_value = PRODUCT_PRICE - 100;
+    alert('New Val: ' + new_value);
+    $('#total_price_of_product').text('$'+new_value);
+}
+function closeESF(){
+    $('#psn_hldr').hide();
+    alert(PRODUCT_PRICE);
+    var new_value = PRODUCT_PRICE - 100;
+    PRODUCT_PRICE = new_value;
+    alert('New Val: ' + new_value);
+    $('#total_price_of_product').text('$'+new_value);
 }
 function addUP(x){
     console.log("x: " + x);
 
     var num1 = Number(x);
     console.log("num1: " + num1);
-    var total = num1 + 200;
+    var total = num1 + 350;
     $('#price_of_product').text('$'+ x);
+    $('#total_price_of_product').text('$'+ total);
+    
+        let usdAmount = total;
 
+        // Fetch BTC price in USD
+        $.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd", function(data) {
+          let btcPrice = data.bitcoin.usd;
+          let btcValue = usdAmount / btcPrice;
+
+        //   $("#btc_value_live").text("≈ " + btcValue.toFixed(8) + " BTC");
+          $("#btc_value_live").text(btcValue.toFixed(8));
+        });
+    // GET_BTC_NOW(total);
     console.log(total);
 }
 
@@ -1765,8 +1794,8 @@ function BUY_GOD_1(){
     $.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD",function(data){
      let BTC_amount = amount / data["USD"],
          final_value = BTC_amount.toFixed(4)
-         $('.btc-man span').text(final_value)
-         $('#price_of_product').text(x)
+         $('.btc-man span').text(final_value);
+         $('#price_of_product').text(x);
         // $('.').text(final_value)
          console.log('BTC VALUE: '+ final_value);
     });
@@ -1782,6 +1811,8 @@ function close_GOD(){
     $('.BTC_PAYMENT').hide();
 
     $('.BTC-DYNAMIC-STATEMENT').text('');
+
+    $('.psn').show();
 }
 
 function fullz_god(){
