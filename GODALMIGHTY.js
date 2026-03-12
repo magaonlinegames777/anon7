@@ -1721,9 +1721,9 @@ function GET_BTC_NOW(x){
 // FEB 2026
 function closePSN(){
     $('#psn_hldr').hide();
-    alert(PRODUCT_PRICE);
+    // alert(PRODUCT_PRICE);
     var new_value = PRODUCT_PRICE - 100;
-    alert('New Val: ' + new_value);
+    // alert('New Val: ' + new_value);
     $('#total_price_of_product').text('$'+new_value);
 }
 function closeESF(){
