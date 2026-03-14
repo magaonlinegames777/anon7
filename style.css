@@ -921,6 +921,8 @@ and (min-width: 0){
 
 .converter{
     color: gray;
+    position: relative;
+    top: -120px;
 }
 .usd-man{
     display: inline-block;
@@ -955,19 +957,51 @@ and (min-width: 0){
     border-bottom: 1px solid;
     border-left: 1px solid green;
     border-right: 1px solid green;
+    border-top: 1px solid green;
 }  
 
+.infoCTNR{
+    position: relative;
+    overflow: auto;
+    max-width: 289px;
+    /* width: 90%; */
+    margin: auto;
+    background-color: transparent;
+    height: 55px;
+    top: -174px;
+    visibility: hidden;
+}
+#vpn_ctrl{
+    top: -174px;
+}
 .tableInfoSymbol{
-    border-radius: 50%;
+    border-radius: 56%;
     border: 1px solid;
-    font-size: 9px;
+    font-size: 15px;
     left: 3px;
     top: 9px;
     position: absolute;
-    padding: 5px;
+    padding: 2px;
     cursor: pointer;
+    line-height: 7px;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
 }
-
+.infomart{
+    display: inline-block;
+    width: 109px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: absolute;
+    left: 0;
+    font-size: 9px;
+    overflow: auto;
+    padding: 3px;
+    height: 50px;
+    border: 1px solid #dfdfdf;
+}
 #closePSN{
     cursor: pointer;
 } 
@@ -986,8 +1020,20 @@ and (min-width: 0){
 
 #closePSN{
     position: absolute;
-    right: 0;
+    right: 3px;
     color: red;
     font-size: 15px;
     top: 9px;
+}
+
+
+
+.scrlCTNR {
+  overflow: auto;          /* allows scrolling */
+  -ms-overflow-style: none; /* hides scrollbar in IE and Edge */
+  scrollbar-width: none;    /* hides scrollbar in Firefox */
+}
+
+.scrlCTNR::-webkit-scrollbar {
+  display: none;            /* hides scrollbar in Chrome, Safari, Opera */
 }
