@@ -1982,3 +1982,77 @@ function security_protector_2(){
         // console.log('BTC_PROTECTOR_GOD: '+ $('#btc_p').text());
     
 }
+
+
+
+// SHOW INFO
+var otpval = 0, psnval = 0, smsval = 0;
+function otpbot_info(){
+
+    if (otpval == 0) {
+        // alert('OTPVAL= '+ otpval);
+        $('#otpbot_ctrl').css('visibility','visible');
+
+        $('#otpbot_ctrl').show();
+        setTimeout(() => {
+            $('#otpbot_ctrl').css('visibility','hidden');
+
+            // $('#otpbot_ctrl').hide();
+        }, 7777);
+        otpval = 1;
+    }else if (otpval == 1) {
+        $('#otpbot_ctrl').css('visibility','hidden');
+        setTimeout(() => {
+            $('#otpbot_ctrl').css('visibility','visible');
+            // $('#otpbot_ctrl').hide();
+        }, 7777);
+        otpval = 0;
+    }
+
+    
+}
+
+function psn_info(){
+
+     if (psnval == 0) {
+        // alert('psnval= '+ psnval);
+        $('#psn_hldr').css('visibility','visible');
+
+        $('#psn_hldr').show();
+        setTimeout(() => {
+            $('#psn_hldr').css('visibility','hidden');
+
+            // $('#psn_hldr').hide();
+        }, 7777);
+        psnval = 1;
+    }else if (psnval == 1) {
+        $('#psn_hldr').css('visibility','hidden');
+        setTimeout(() => {
+            $('#psn_hldr').css('visibility','visible');
+            // $('#psn_hldr').hide();
+        }, 7777);
+        psnval = 0;
+    }
+}
+
+function smsflooding_info(){
+     if (smsval == 0) {
+        // alert('smsval= '+ smsval);
+        $('#fldn_hldr').css('visibility','visible');
+
+        $('#fldn_hldr').show();
+        setTimeout(() => {
+            $('#fldn_hldr').css('visibility','hidden');
+
+            // $('#fldn_hldr').hide();
+        }, 7777);
+        smsval = 1;
+    }else if (smsval == 1) {
+        $('#fldn_hldr').css('visibility','hidden');
+        setTimeout(() => {
+            $('#fldn_hldr').css('visibility','visible');
+            // $('#fldn_hldr').hide();
+        }, 7777);
+        smsval = 0;
+    }
+}
