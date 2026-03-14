@@ -652,8 +652,13 @@
                   
                 </div>
               </div>
-              <div class="table_anon">
-                <span class="material-icons tableInfoSymbol">!</span>
+
+              
+
+             <!-- otp table -->
+              <div class="table_anon otp">
+                <span class="material-icons tableInfoSymbol" onclick="otpbot_info()">!</span>
+                
 
                 <div class="tb_bx tbx1">
                   OTP Authenticator BOT added
@@ -662,7 +667,9 @@
                   $<span class="botPrice">150</span>
                 </div>
               </div>
-              <div class="table_anon psn" id="psn_hldr">
+              <!-- psn table -->
+              <div class="table_anon psn">
+                <span class="material-icons tableInfoSymbol" onclick="psn_info();">!</span>
                 <i class="material-icons" id="closePSN" onclick="closePSN();">close</i>
                 <div class="tb_bx tbx1">
                   Private Server Network [VPN] (optional): 
@@ -671,7 +678,9 @@
                   $<span class="pvnPrice">100</span>
                 </div>
               </div>
-               <div class="table_anon psn" id="psn_hldr">
+              <!-- sms flooding -->
+               <div class="table_anon sms">
+                <span class="material-icons tableInfoSymbol" onclick="smsflooding_info()">!</span>
                 <i class="material-icons" id="closePSN" onclick="closeESF();">close</i>
                 <div class="tb_bx tbx1">
                   Email & SMS flooding (optional): 
@@ -680,6 +689,33 @@
                   $<span class="pvnPrice">100</span>
                 </div>
               </div>
+
+
+
+              <!-- OTP BOT -->
+               <div class="infoCTNR" id="otpbot_ctrl">
+                  <span class="infomart scrlCTNR" >
+                    This bot allows to intercept one-time passwords. 
+                    Temporary codes sent via sms or email.
+                  </span>
+               </div>
+
+               <!-- VPN BOT -->
+               <div class="infoCTNR" id="psn_hldr">
+                  <span class="infomart scrlCTNR">
+                    This encrypts the internet traffic and mask your IP to match that of
+                    the account holder ISP.
+                  </span>
+               </div>
+
+                <!-- EMAIL & SMS BOT -->
+               <div class="infoCTNR" id="fldn_hldr">
+                  <span class="infomart scrlCTNR">
+                    This flooding bot overwhelm target's inbox with 
+                    thousand of messages, making it difficult to spot 
+                    legitimate communications.
+                  </span>
+               </div>
               <span class="BTC-DYNAMIC-STATEMENT red-text">
 
               </span>
