@@ -396,6 +396,7 @@ a{
 }
 .tt2{
     font-size: 13px;
+    line-break: anywhere;
 }
 .table_1{
     border: 1px solid rgba(128, 128, 128, 0.281);
@@ -960,6 +961,10 @@ and (min-width: 0){
     border-top: 1px solid green;
 }  
 
+.psn, .otp, .sms{
+    font-size: 12px;
+}
+
 .infoCTNR{
     position: relative;
     overflow: auto;
@@ -968,8 +973,9 @@ and (min-width: 0){
     margin: auto;
     background-color: transparent;
     height: 55px;
-    top: -174px;
+    top: -141px;
     visibility: hidden;
+    z-index: 777;
 }
 #vpn_ctrl{
     top: -174px;
@@ -977,17 +983,18 @@ and (min-width: 0){
 .tableInfoSymbol{
     border-radius: 56%;
     border: 1px solid;
-    font-size: 15px;
+    font-size: 11px;
     left: 3px;
     top: 9px;
     position: absolute;
     padding: 2px;
     cursor: pointer;
     line-height: 7px;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     padding-left: 4px;
     padding-right: 4px;
-    padding-top: 4px;
+    padding-top: 2px;
+    z-index: 777;
 }
 .infomart{
     display: inline-block;
@@ -1011,11 +1018,18 @@ and (min-width: 0){
     float: left;
     margin-left: 2px;
     text-align: center;
-
+    
+    line-height: 1;
+    padding: 7px 0;
 }
 .tbx1{
     border-right: 1px solid;
-    padding: 0 22px;
+    position: relative;
+}
+.tbx1 span{
+    display: block;
+    width: 85%;
+    float: right;
 }
 
 #closePSN{
@@ -1025,6 +1039,7 @@ and (min-width: 0){
     font-size: 15px;
     top: 9px;
 }
+
 
 
 
