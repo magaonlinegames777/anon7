@@ -1720,18 +1720,47 @@ function GET_BTC_NOW(x){
 }
 // FEB 2026
 function closePSN(){
-    $('#psn_hldr').hide();
+    $('.psn').hide();
     // alert(PRODUCT_PRICE);
+    
     var new_value = PRODUCT_PRICE - 100;
+    PRODUCT_PRICE = new_value;
+    console.log('This is PSN New Value: ' + PRODUCT_PRICE);
+    
+    $.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD",function(data){
+     let BTC_amount = PRODUCT_PRICE / data["USD"],
+         final_value = BTC_amount.toFixed(4)
+         $('.btc-man span').text(final_value);
+        //  addUP(raw_price); 88888
+        //  $('.price_of_product').text(x);88
+        // $('.').text(final_value)
+
+        // $('.price').text();88888
+        //  console.log('BTC VALUE now: '+ final_value);888
+    });
     // alert('New Val: ' + new_value);
     $('#total_price_of_product').text('$'+new_value);
 }
 function closeESF(){
-    $('#psn_hldr').hide();
-    alert(PRODUCT_PRICE);
+    $('.sms').hide();
+    // alert(PRODUCT_PRICE);
+    
     var new_value = PRODUCT_PRICE - 100;
     PRODUCT_PRICE = new_value;
-    alert('New Val: ' + new_value);
+    console.log('This is ESN New Value: ' + PRODUCT_PRICE);
+    
+    $.get("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD",function(data){
+     let BTC_amount = PRODUCT_PRICE / data["USD"],
+         final_value = BTC_amount.toFixed(4)
+         $('.btc-man span').text(final_value);
+        //  addUP(raw_price); 88888
+        //  $('.price_of_product').text(x);88
+        // $('.').text(final_value)
+
+        // $('.price').text();88888
+        //  console.log('BTC VALUE now: '+ final_value);888
+    });
+    // alert('New Val: ' + new_value);
     $('#total_price_of_product').text('$'+new_value);
 }
 function addUP(x){
