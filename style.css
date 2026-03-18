@@ -180,6 +180,7 @@ a{
     right: 9px;
     font-size: 8PX;
     color: #aaaaaa;
+    text-transform: uppercase;
 }
 
 .menu_mobile{
@@ -199,6 +200,9 @@ a{
 .header_1{
     background: #ffffff99;
     padding: 9px 0px;
+    position: fixed;
+    width: 100%; 
+    z-index: 666;
 }
 .hdr1row{
     position: relative;
@@ -320,10 +324,11 @@ a{
     position: relative;
     right: 0;
     width: 75%; 
-    float: right; 
+    /* float: right;  */
     padding: 34px; 
     overflow: hidden;
     overflow-y: auto;
+    background-color: #00000054;
 }
 .activityCard{
 
@@ -800,10 +805,12 @@ and (min-width: 0){
         position: relative;
         right: 0;
         width: 100%; 
-        float: right; 
+        /* float: right;  */
         padding: 0px; 
         overflow: hidden;
         overflow-y: auto;
+        margin-top: 172px;
+        z-index: 665;
     }
     .cardman{
         margin-top: 10px;
@@ -918,6 +925,7 @@ and (min-width: 0){
     margin: auto;
     position: relative;
     word-break: break-all;
+    display: none;
 }
 
 .converter{
@@ -1035,11 +1043,21 @@ and (min-width: 0){
 #closePSN{
     position: absolute;
     right: 3px;
-    color: red;
+    /* color: red; */
     font-size: 15px;
     top: 9px;
 }
 
+.buyNowBTN{
+    /* background-color: red; */
+    position: relative;
+    text-align: center;
+    top: -53px;
+}
+.buyNowBTN a{
+    width: 129px;
+    text-align: center;
+}
 
 
 
