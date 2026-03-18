@@ -300,7 +300,7 @@
             </div> 
           </div>
           <div class="col s12 m8 hide balance_N_summary">
-            <div class="cardman activityCard ">
+            <div class="cardman activityCard scrlCTNR ">
               <span class="cardmanTITLE">Activity</span>
               <br>
 
@@ -633,7 +633,7 @@
                 
               </div>
               <div class="CLIC_TO_COPY" style="text-align: center;">
-                <a class="btn grey c_copy" id="show_btc_address_btn" onclick="SHOWBTCADDRESS();">SHOW BTC ADDRESS</a>
+                <a class="btn grey c_copy" id="show_btc_address_btn" onclick="checkbtcNumber();">SHOW BTC ADDRESS</a>
                 <a class="btn grey c_copy hide" id="click_to_copy_btn" onclick="copyToClipboard();">CLICK TO COPY</a>
               </div>
             </div>
@@ -645,8 +645,8 @@
               </span>
               <br> <br>
               <div class="table_anon">
-                <div class="tb_bx tbx1">
-                  Bank Logs: 
+                <div class="tb_bx tbx1 name_of_product">
+                  Logs: 
                 </div>
                 <div class="tb_bx price_of_product">
                   
@@ -734,7 +734,11 @@
                 <span id="btc_value_live"></span> BTC
               </div>
             </div>
-            <br><br>
+            
+            <div class="buyNowBTN">
+              <a class="btn grey" id="buynow_btn" onclick="BUYTHISNOW();">BUY NOW</a>
+            </div>
+            <br>
             
           </div>
         </div>
