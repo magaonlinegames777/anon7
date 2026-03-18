@@ -2176,7 +2176,7 @@ function BUYTHISNOW(){
         alert('You have insufficient balance, please top up now.');
         $('.paymentBX').show();
     }else if (productPrice < userBalance) {
-        alert('This CAN be done...'+ '='+productPrice+' ='+userBalance);
+        alert('Error 401 – System maintenance in progress. Retry after a short while');
         $('.paymentBX').hide();
 
     }
