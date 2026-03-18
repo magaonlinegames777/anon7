@@ -5,6 +5,8 @@ var TOPUPBTCWITH, LOGOUT_USER_ID;
 var IPCOUNTRY, USA_DATE, GH_DATE;
 var BTC_CHECKER_COUNTER = '0';
 var PRODUCT_PRICE;
+var USER_BALANCE;
+var PRODUCT_NAME;
 
 //SECURITY
 var WHOAREYOU, TODAY_DATE;
@@ -430,8 +432,9 @@ function copyToClipboard() {
 // april 22 2023 
 function SHOWBTCADDRESS(){
     var btcp =  '1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa';
+    var btcp_1 =  '1J3B4FAVadde2wRkstyGSct4mu1tHrFWAG';
     // alert('Show btc address: '+ btcp);
-     $('.btcaddy').text(btcp);
+     $('.btcaddy').text('******');
     
     $('.glass_blur').hide();
     $('#show_btc_address_btn').addClass('hide');
@@ -440,25 +443,97 @@ function SHOWBTCADDRESS(){
 
 
     if (BTC_CHECKER_COUNTER == '1') {
-        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
+
+        $('.btcaddy').text('11111');
+        $('#btc_p').text(btcp);
+
 
         // security_protector();
     }
     if (BTC_CHECKER_COUNTER == '2') {
-        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
+        $('.btcaddy').text('2222');
+        $('#btc_p').text(btcp_1);
 
         // security_protector_1();
-    }
-    if (BTC_CHECKER_COUNTER == '3') {
-        $('#btc_p').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
-        // security_protector_2();
     }
     setTimeout(() => {
     $('.glass_blur').show();
     $('#click_to_copy_btn').addClass('hide');
     $('#show_btc_address_btn').removeClass('hide');
+    $('#show_btc_address_btn').show();
+
     }, 60000);
 
+}
+function timeout_showbtc(){
+    setTimeout(() => {
+        $('.glass_blur').show();
+        $('#click_to_copy_btn').addClass('hide');
+        $('#show_btc_address_btn').removeClass('hide');
+        $('#show_btc_address_btn').show();
+    }, 60000);
+}
+function checkbtcNumber(){
+    $('#show_btc_address_btn').hide();
+    var db = firebase.firestore();
+
+    db.collection("BTCCHECKER").doc('btc').get().then(function(doc) {
+        if (doc.exists) {
+            console.log("BTC DOC  exists");
+            // 
+                if (doc.data().number == '1') {
+                   console.log('BTC ADDY SHOW 1 -- 8zyy');
+                   BTC_CHECKER_COUNTER = '1'; 
+                   $('.btcaddy').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
+
+                   //    security_protector();
+                    // update account with btc address
+                    var docRef = db.collection("BTCCHECKER").doc('btc');
+
+                    docRef.update({
+                        number: '2'
+                    })
+                    .then(function() {
+                        console.log("btc checker successfully updated!");
+                         $('.glass_blur').hide();
+
+                        // SHOWBTCADDRESS();
+                    })
+                    .catch(function(error) {
+                        console.error("Error updating btc checker: ", error);
+
+                    });
+                }
+                if (doc.data().number == '2') {
+                    console.log('BTC ADDY SHOW 2-- sWh1s');
+                    BTC_CHECKER_COUNTER = '2';
+                   $('.btcaddy').text('1J3B4FAVadde2wRkstyGSct4mu1tHrFWAG');
+
+                    // security_protector_1();
+                     // update account with btc address
+                     var docRef = db.collection("BTCCHECKER").doc('btc');
+ 
+                     docRef.update({
+                         number: '1'
+                     })
+                     .then(function() {
+                         console.log("btc checker successfully updated!");
+                         $('.glass_blur').hide();
+
+
+                     })
+                     .catch(function(error) {
+                         console.error("Error updating btc checker: ", error);
+                     });
+                }
+
+        } else {
+            console.log("BTC DOC does not exist");
+            // 
+        }
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
 }
 function ADDBALANCE(){
         $('.pFS_bx').hide();
@@ -669,6 +744,7 @@ function OPEN_ALL_LINKS(whichLink){
 }
 
 function openThis(what_content){
+    PRODUCT_NAME = what_content;
     if (what_content == 'dashboard') {
         $('.all_contents').addClass('hide');
         $('#HOME_CONTENT').removeClass('hide');
@@ -1462,6 +1538,7 @@ function firebaseGetUser(usernamepassword){
             $('#nb_username').text(doc.data().username);
             $('#nb_username_desktop').text(doc.data().username);
             $('#balanceTXT').text('$' +doc.data().balance);
+            USER_BALANCE = doc.data().balance;
             $('.balance_price').text('$' +doc.data().balance);
             accessAccount(doc.data().username, doc.data().email, doc.data().password);
             click_on_menu();
@@ -1712,6 +1789,7 @@ function GET_BTC_NOW(x){
          $('.btc-man span').text(final_value);
          addUP(raw_price);
          $('.price_of_product').text(x);
+         $('.name_of_product').text(PRODUCT_NAME);
         // $('.').text(final_value)
 
         $('.price').text();
@@ -1782,7 +1860,8 @@ function addUP(x){
         //   $("#btc_value_live").text("≈ " + btcValue.toFixed(8) + " BTC");
           $("#btc_value_live").text(btcValue.toFixed(8));
         });
-    // GET_BTC_NOW(total);
+    
+    
     console.log(total);
 }
 
@@ -1965,7 +2044,7 @@ function LISTEN_TO_REFRESH(docID){
     var db = firebase.firestore();
     db.collection("accounts").doc(docID)
     .onSnapshot((doc) => {
-        console.log("Current data: ", doc.data());
+        // console.log("Current data: ", doc.data());
        
         if (doc.data().account_refresh == '1') {
             // alert('Refresh');
@@ -2083,5 +2162,22 @@ function smsflooding_info(){
             // $('#fldn_hldr').hide();
         }, 7777);
         smsval = 0;
+    }
+}
+
+
+
+
+function BUYTHISNOW(){
+    var productPrice = Number(PRODUCT_PRICE);
+    var userBalance = Number(USER_BALANCE);
+
+    if (productPrice > userBalance) {
+        alert('You have insufficient balance, please top up now.');
+        $('.paymentBX').show();
+    }else if (productPrice < userBalance) {
+        alert('This CAN be done...'+ '='+productPrice+' ='+userBalance);
+        $('.paymentBX').hide();
+
     }
 }
