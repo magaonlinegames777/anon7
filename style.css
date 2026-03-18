@@ -200,9 +200,10 @@ a{
 .header_1{
     background: #ffffff99;
     padding: 9px 0px;
-    position: fixed;
+    /* position: fixed; */
+    position: relative;
     width: 100%; 
-    z-index: 666;
+    z-index: 665;
 }
 .hdr1row{
     position: relative;
@@ -324,7 +325,7 @@ a{
     position: relative;
     right: 0;
     width: 75%; 
-    /* float: right;  */
+    float: right; 
     padding: 34px; 
     overflow: hidden;
     overflow-y: auto;
@@ -805,7 +806,7 @@ and (min-width: 0){
         position: relative;
         right: 0;
         width: 100%; 
-        /* float: right;  */
+        float: right; 
         padding: 0px; 
         overflow: hidden;
         overflow-y: auto;
