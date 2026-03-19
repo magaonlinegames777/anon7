@@ -1961,7 +1961,7 @@ function BUY_GOD_2(amount_nb){
         $('.BTC-HOME').show();
         $('.BTC-HOME').removeClass('hide');
           $('.BTC_PAYMENT').show();
-          $('.BTC-DYNAMIC-STATEMENT').text('Minimum deposit no less than $100');
+        //   $('.BTC-DYNAMIC-STATEMENT').text('Minimum deposit no less than $100');
     }else{
     $('.converter').show();
     $('#HOME_CONTENT').removeClass('hide');
