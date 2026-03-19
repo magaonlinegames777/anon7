@@ -926,7 +926,7 @@ and (min-width: 0){
     margin: auto;
     position: relative;
     word-break: break-all;
-    display: none;
+    display: block;
 }
 
 .converter{
