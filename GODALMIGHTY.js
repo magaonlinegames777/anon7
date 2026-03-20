@@ -67,7 +67,12 @@ $(document).ready(function(){
     //BANK LOGS OPEN PRODUCTS
     $('#products_links a').click(
         function(){
-            openThis('products');
+            // openThis('products');
+            $('.all_contents').addClass('hide');
+            $('.productsForSale').removeClass('hide');
+            if ($(window).width() < 990) {
+                click_on_menu();
+            }
         }
     );
 
@@ -1765,6 +1770,7 @@ function GET_BTC_NOWold(x){
          final_value = BTC_amount.toFixed(4)
          $('.btc-man span').text(final_value);
          $('#price_of_product').text(x);
+         $('.name_of_product').text(PRODUCT_NAME);
         // $('.').text(final_value)
          console.log('BTC VALUE: '+ final_value);
     });
@@ -1912,6 +1918,10 @@ function BUY_GOD_1(){
 }
 
 function close_GOD(){
+    //   2026 march
+    $('.table_anon').show();
+    $('.buyNowBTN').show();
+
     $('.HOME_SUM').show();
 
     $('.BTC_PAYMENT').hide();
@@ -1961,6 +1971,9 @@ function BUY_GOD_2(amount_nb){
         $('.BTC-HOME').show();
         $('.BTC-HOME').removeClass('hide');
           $('.BTC_PAYMENT').show();
+        //   2026 march
+        $('.table_anon').hide();
+        $('.buyNowBTN').hide();
         //   $('.BTC-DYNAMIC-STATEMENT').text('Minimum deposit no less than $100');
     }else{
     $('.converter').show();
