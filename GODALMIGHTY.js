@@ -2190,7 +2190,7 @@ function BUYTHISNOW(){
         $('.paymentBX').show();
     }else if (productPrice < userBalance) {
         alert('Error 401 – System maintenance in progress. Retry after a short while');
-        $('.paymentBX').hide();
+        // $('.paymentBX').hide();
 
     }
 }
