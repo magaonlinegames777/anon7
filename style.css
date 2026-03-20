@@ -220,6 +220,7 @@ a{
     top: -10px;
     right: 58px;
     border-radius: 5px;
+    cursor: pointer;
 }
 .header_ryt{
     text-align: right;
@@ -810,7 +811,7 @@ and (min-width: 0){
         padding: 0px; 
         overflow: hidden;
         overflow-y: auto;
-        margin-top: 172px;
+        margin-top: 45px;
         z-index: 665;
     }
     .cardman{
