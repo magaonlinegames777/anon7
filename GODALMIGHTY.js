@@ -555,8 +555,8 @@ function BUYNOW(){
     //BUY_GOD();
     $('.productTable').slideUp();
     $('.SHOPPING_CART_BOX').removeClass('hide');
-
-
+    $('.table_anon').show();
+    $('.buyNowBTN').show();
 }
 
 function getThisProduct(x){
@@ -1958,8 +1958,8 @@ function top_up_balance(x){
 
 function BUY_GOD_2(amount_nb){
     if (amount_nb == 100) {
+        
         console.log('A 100');
-        closeThis('shopping_cart');
         $('.all_contents').addClass('hide');
         //$('.shopping_cart')
         $('.converter').hide();
