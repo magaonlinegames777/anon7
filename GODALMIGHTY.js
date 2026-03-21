@@ -91,6 +91,85 @@ $(document).ready(function(){
   });
 
 
+// march 2026
+function GET_ORDER_HISTORY(){
+    // var download;
+    $(".order_history tr").remove();
+    var db = firebase.firestore();
+    var date_db;
+    db.collection("USER_ORDER_HISTORY").where("account_dir", "==", LOGOUT_USER_ID)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            // doc.data() is never undefined for query doc snapshots ****
+            console.log(doc.id, " => ", doc.data());
+            date_db = new Date(doc.data().date_of_order);
+            // download = doc.data().download;
+            $(".order_history").append(
+            '<tr>' +
+                '<td class="">' + 1 + '</td>' +
+                '<td class="">' + date_db + '</td>' +
+                '<td class="">' + doc.data().description + '</td>' +
+                '<td class="">' + doc.data().amount_paid + '</td>' +
+                '<td class="downloadbtn">' +
+                '<a href="blogs.zip" download="blogs.zip" >download</a>' +
+                '</td>' +
+            '</tr>'
+            );
+            // $(".order_history").append(' <tr><td class="">'+doc.data().description+'</td><td class="">'+1+'</td><td class="">'+doc.data().amount_paid+'</td><td class="downloadbtn"> <a download=+'doc.data().download'+>download</a> </td></tr>');
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+}
+//ADD ORDER HISTORY 2.0
+function ADD_ORDER_HISTORY(accDir,userBALANCE,number, date,sum,description){
+    // twisted reality
+    var db = firebase.firestore();
+    db.collection("USER_ORDER_HISTORY").add({
+        account_dir: accDir,
+        number: number,
+        date_of_order: date,
+        amount_paid: sum,
+        description: description
+    })
+    .then(() => {
+        console.log("ORDER HISTORY successfully written!");
+        //MOVE TO ORDER HISTORY 
+        $('#buynow_btn').show();
+        //WORKOUT BALANCE
+        UPDATE_BALANCE(userBALANCE);
+       
+    })
+    .catch((error) => {
+        console.error("Error writing ORDER HISTORY: ", error);
+        $('#buynow_btn').show();
+
+    });
+}
+function UPDATE_BALANCE(x){
+    var db = firebase.firestore();
+    var washingtonRef = db.collection("accounts").doc(LOGOUT_USER_ID);
+
+    // Set the "capital" field of the city 'DC'
+    return washingtonRef.update({
+        balance: x
+    })
+    .then(() => {
+        console.log("balance successfully updated!");
+        $('.account_user_balance').text(x);
+        USER_BALANCE = x;
+        openThis('orderHistory');
+        menuChecker = 1;
+        click_on_menu();
+        // OPEN_MYORDERS();
+    })
+    .catch((error) => {
+        // The balance probably doesn't exist.
+        console.error("Error updating balance: ", error);
+    });
+}
 
 // MAY 2 2023
 function BTC_CHECKER_COUNTER(){
@@ -764,6 +843,8 @@ function openThis(what_content){
         if ($(window).width() < 990) {
             click_on_menu();
         }
+        // get orders
+        GET_ORDER_HISTORY();
     }
     if (what_content == 'cart') {
         $('.all_contents').addClass('hide');
@@ -2185,12 +2266,22 @@ function BUYTHISNOW(){
     var productPrice = Number(PRODUCT_PRICE);
     var userBalance = Number(USER_BALANCE);
 
+    $('#buynow_btn').hide();
+
+
     if (productPrice > userBalance) {
         alert('You have insufficient balance, please top up now.');
         $('.paymentBX').show();
     }else if (productPrice < userBalance) {
-        alert('Error 401 – System maintenance in progress. Retry after a short while');
+        // alert('Error 401 – System maintenance in progress. Retry after a short while');
         // $('.paymentBX').hide();
+        var balancenow = userBalance - productPrice;
+        $('.balance_price').text(balancenow);
+        console.log('BALANCE NOW= '+ balancenow);
+        var time = new Date().getTime();
+        console.log("Timestamp:", time);
+
+        ADD_ORDER_HISTORY(LOGOUT_USER_ID,balancenow,1,time,productPrice,PRODUCT_NAME);
 
     }
 }
