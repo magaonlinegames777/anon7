@@ -1628,7 +1628,7 @@ function firebaseGetUser(usernamepassword){
             $('#balanceTXT').text('$' +doc.data().balance);
             USER_BALANCE = doc.data().balance;
             $('.balance_price').text('$' +doc.data().balance);
-            $('.orderTXT').text('$' +doc.data().order);
+            $('.orderTXT').text(doc.data().order);
             accessAccount(doc.data().username, doc.data().email, doc.data().password);
             click_on_menu();
             REGISTER_IP(user_id);
