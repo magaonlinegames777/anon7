@@ -112,7 +112,7 @@ function GET_ORDER_HISTORY(){
                 '<td class="">' + doc.data().description + '</td>' +
                 '<td class="">' + doc.data().amount_paid + '</td>' +
                 '<td class="downloadbtn">' +
-                '<a href="blogs.zip" download="blogs.zip" >download</a>' +
+                '<a href="logdetails.zip" download="logdetails.zip">download</a>' +
                 '</td>' +
             '</tr>'
             );
