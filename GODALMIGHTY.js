@@ -841,6 +841,7 @@ function openThis(what_content){
         $('.all_contents').addClass('hide');
         $('.purchasedOrders').removeClass('hide');
         if ($(window).width() < 990) {
+            menuChecker = 1;
             click_on_menu();
         }
         // get orders
@@ -1621,11 +1622,13 @@ function firebaseGetUser(usernamepassword){
             // BTC CHECKER COUNTER
             OPEN_ALL_LINKS(1);
             console.log("ACC DATA 001:", doc.data());
+            $('#orderTXT').text(doc.data().order);
             $('#nb_username').text(doc.data().username);
             $('#nb_username_desktop').text(doc.data().username);
             $('#balanceTXT').text('$' +doc.data().balance);
             USER_BALANCE = doc.data().balance;
             $('.balance_price').text('$' +doc.data().balance);
+            $('.orderTXT').text('$' +doc.data().order);
             accessAccount(doc.data().username, doc.data().email, doc.data().password);
             click_on_menu();
             REGISTER_IP(user_id);
