@@ -568,7 +568,7 @@ function checkbtcNumber(){
                 if (doc.data().number == '1') {
                    console.log('BTC ADDY SHOW 1 -- 8zyy');
                    BTC_CHECKER_COUNTER = '1'; 
-                   $('.btcaddy').text('1P1MnLiJkibWdi9a3CFj4mYPTGi2h8BjCa');
+                   $('.btcaddy').text('1Hd6qFUiNf2g71XsNP49fLigDz34p2d4MX');
 
                    //    security_protector();
                     // update account with btc address
@@ -591,7 +591,7 @@ function checkbtcNumber(){
                 if (doc.data().number == '2') {
                     console.log('BTC ADDY SHOW 2-- sWh1s');
                     BTC_CHECKER_COUNTER = '2';
-                   $('.btcaddy').text('1J3B4FAVadde2wRkstyGSct4mu1tHrFWAG');
+                   $('.btcaddy').text('1MyB2up2EG9AHpA13QrZD1YNZd6BauUKHn');
 
                     // security_protector_1();
                      // update account with btc address
